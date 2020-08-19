@@ -1,0 +1,22 @@
+{
+  "name": "graphql-server-concepts",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "node api/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manishsundriyal/GraphQL-Server-Concepts.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manishsundriyal/GraphQL-Server-Concepts/issues"
+  },
+  "homepage": "https://github.com/manishsundriyal/GraphQL-Server-Concepts#readme",
+  "dependencies": {
+    "apollo-server": "^2.16.1"
+  }
+}
