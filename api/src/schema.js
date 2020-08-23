@@ -1,15 +1,10 @@
-const { gql } = require('apollo-server');
+const { makeExecutableSchema } = require('apollo-server');
+const typeDefs = require('./typeDefs');
+const resolvers = require('./resolvers');
 
-const typeDefs = gql`
-    type User {
-        id: ID!
-        username: String!
-        email: String!
-    }
+const schema = makeExecutableSchema({
+    typeDefs,
+    resolvers,
+})
 
-    type Query {
-        user: User!
-    }
-`;
-
-module.exports = typeDefs;
+module.exports = schema;

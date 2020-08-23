@@ -1,13 +1,4 @@
-const resolver = {
-    Query: {
-        user() {
-            return {
-                id: '123456789',
-                username: 'jhondoe',
-                email: 'jhondoe@gmail.com'
-            }
-        }
-    }
-};
+const { merge } = require('lodash');
+const { user, feed } = require('./modules');
 
-module.exports = resolver;
+module.exports = merge(user.resolvers, feed.resolvers);
