@@ -5,5 +5,11 @@ const Query = gql`
     type Query {
         _empty: String
     }
+    type User {
+        feed: [Feed]
+    }
+    type Feed {
+        user: User
+    }
 `;
 module.exports = [Query, user.typeDefs, feed.typeDefs];

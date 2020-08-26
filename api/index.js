@@ -1,6 +1,6 @@
 const { ApolloServer } = require('apollo-server');
 
-const { schema} = require('./src');
+const { schema } = require('./src');
 
 const server = new ApolloServer({
     schema,

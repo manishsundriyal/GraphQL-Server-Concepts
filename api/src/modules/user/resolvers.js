@@ -1,11 +1,14 @@
+const db = require('../../db/db.json');
+
 const resolvers = {
     Query: {
-        user() {
-            return {
-                id: "3456789",
-                name: 'Jamie',
-                email: "Jamie@gmail.com"
-            }
+        users: () => {
+            return db.users;
+        }
+    },
+    User: {
+        feed: parent => {
+            return db.feed.filter(({ id }) => parent.feed === id);
         }
     }
 };
